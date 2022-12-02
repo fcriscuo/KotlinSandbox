@@ -1,0 +1,1000 @@
+format-version: 1.2
+data-version: hp/releases/2022-10-05
+saved-by: Peter Robinson, Sebastian Koehler, Sandra Doelken, Chris Mungall, Melissa Haendel, Nicole Vasilevsky, Monarch Initiative, et al.
+subsetdef: hposlim_core "Core clinical terminology"
+subsetdef: secondary_consequence "Consequence of a disorder in another organ system."
+synonymtypedef: abbreviation "abbreviation"
+synonymtypedef: HP:0034334 "allelic_requirement"
+synonymtypedef: layperson "layperson term"
+synonymtypedef: obsolete_synonym "discarded/obsoleted synonym"
+synonymtypedef: plural_form "plural form"
+synonymtypedef: uk_spelling "UK spelling"
+default-namespace: human_phenotype
+remark: Please see license of HPO at http://www.human-phenotype-ontology.org
+ontology: hp.obo
+property_value: http://purl.org/dc/elements/1.1/creator "Human Phenotype Ontology Consortium" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Monarch Initiative" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Peter Robinson" xsd:string
+property_value: http://purl.org/dc/elements/1.1/creator "Sebastian Köhler" xsd:string
+property_value: http://purl.org/dc/elements/1.1/description "The Human Phenotype Ontology (HPO) provides a standardized vocabulary of phenotypic abnormalities and clinical features encountered in human disease." xsd:string
+property_value: http://purl.org/dc/elements/1.1/rights "Peter Robinson, Sebastian Koehler, The Human Phenotype Ontology Consortium, and The Monarch Initiative" xsd:string
+property_value: http://purl.org/dc/elements/1.1/subject "Phenotypic abnormalities encountered in human disease" xsd:string
+property_value: http://purl.org/dc/elements/1.1/title "Human Phenotype Ontology" xsd:string
+property_value: http://purl.org/dc/terms/license https://hpo.jax.org/app/license
+property_value: IAO:0000700 HP:0000001
+property_value: owl:versionInfo "2022-10-05" xsd:string
+logical-definition-view-relation: has_part
+
+[Term]
+id: HP:0000001
+name: All
+comment: Root of all terms in the Human Phenotype Ontology.
+xref: UMLS:C0444868
+
+[Term]
+id: HP:0000002
+name: Abnormality of body height
+def: "Deviation from the norm of height with respect to that which is expected according to age and gender norms." [HPO:probinson]
+synonym: "Abnormality of body height" EXACT layperson []
+xref: UMLS:C4025901
+is_a: HP:0001507 ! Growth abnormality
+created_by: peter
+creation_date: 2008-02-27T02:20:00Z
+
+[Term]
+id: HP:0000003
+name: Multicystic kidney dysplasia
+alt_id: HP:0004715
+def: "Multicystic dysplasia of the kidney is characterized by multiple cysts of varying size in the kidney and the absence of a normal pelvicaliceal system. The condition is associated with ureteral or ureteropelvic atresia, and the affected kidney is nonfunctional." [HPO:curators]
+comment: Multicystic kidney dysplasia is the result of abnormal fetal renal development in which the affected kidney is replaced by multiple cysts and has little or no residual function. The vast majority of multicystic kidneys are unilateral. Multicystic kidney can be diagnosed on prenatal ultrasound.
+synonym: "Multicystic dysplastic kidney" EXACT []
+synonym: "Multicystic kidneys" EXACT []
+synonym: "Multicystic renal dysplasia" EXACT []
+xref: MSH:D021782
+xref: SNOMEDCT_US:204962002
+xref: SNOMEDCT_US:82525005
+xref: UMLS:C3714581
+is_a: HP:0000107 ! Renal cyst
+
+[Term]
+id: HP:0000005
+name: Mode of inheritance
+alt_id: HP:0001425
+alt_id: HP:0001453
+alt_id: HP:0001461
+alt_id: HP:0010985
+def: "The pattern in which a particular genetic trait or disorder is passed from one generation to the next." [HPO:probinson]
+comment: While there is a close conceptual relationship between allelic requirement and inheritance, they serve different purposes; allelic requirement is necessary for variant annotation\npipelines and to determine if a given variant in a specific context is relevant to the phenotype of the patient e.g. a heterozygous variant (in the absence of compound heterozygosity) is relevant for dominant but not for recessive disease; while inheritance is used for describing the mode of inheritance of a phenotype and is particularly applicable in the clinical setting for communicating recurrence risk, to guide family screening, and to guide reproductive advice.
+synonym: "Inheritance" EXACT []
+xref: UMLS:C1708511
+is_a: HP:0000001 ! All
+
+[Term]
+id: HP:0000006
+name: Autosomal dominant inheritance
+alt_id: HP:0001415
+alt_id: HP:0001447
+alt_id: HP:0001448
+alt_id: HP:0001451
+alt_id: HP:0001452
+alt_id: HP:0001455
+alt_id: HP:0001456
+alt_id: HP:0001463
+def: "A mode of inheritance that is observed for traits related to a gene encoded on one of the autosomes (i.e., the human chromosomes 1-22) in which a trait manifests in heterozygotes. In the context of medical genetics, an autosomal dominant disorder is caused when a single copy of the mutant allele is present. Males and females are affected equally, and can both transmit the disorder with a risk of 50% for each child of inheriting the mutant allele." [HPO:curators]
+synonym: "Autosomal dominant" EXACT []
+synonym: "Autosomal dominant form" RELATED [HPO:skoehler]
+synonym: "Autosomal dominant type" RELATED [HPO:skoehler]
+synonym: "monoallelic_autosomal" EXACT HP:0034334 []
+xref: SNOMEDCT_US:263681008
+xref: UMLS:C0443147
+is_a: HP:0034345 ! Mendelian inheritance
+
+[Term]
+id: HP:0000007
+name: Autosomal recessive inheritance
+alt_id: HP:0001416
+alt_id: HP:0001526
+alt_id: HP:0031362
+def: "A mode of inheritance that is observed for traits related to a gene encoded on one of the autosomes (i.e., the human chromosomes 1-22) in which a trait manifests in individuals with two pathogenic alleles, either homozygotes (two copies of the same mutant allele) or compound heterozygotes (whereby each copy of a gene has a distinct mutant allele)." [HPO:probinson]
+synonym: "Autosomal recessive" EXACT []
+synonym: "Autosomal recessive form" RELATED [HPO:skoehler]
+synonym: "Autosomal recessive predisposition" RELATED []
+synonym: "biallelic_autosomal" EXACT HP:0034334 []
+xref: SNOMEDCT_US:258211005
+xref: UMLS:C0441748
+xref: UMLS:C4020899
+is_a: HP:0034345 ! Mendelian inheritance
+
+[Term]
+id: HP:0000008
+name: Abnormal morphology of female internal genitalia
+def: "An abnormality of the female internal genitalia." [HPO:probinson]
+synonym: "Abnormality of female internal genitalia" EXACT []
+xref: UMLS:C4025900
+is_a: HP:0000812 ! Abnormal internal genitalia
+is_a: HP:0010460 ! Abnormality of the female genitalia
+
+[Term]
+id: HP:0000009
+name: Functional abnormality of the bladder
+alt_id: HP:0004424
+alt_id: HP:0008731
+def: "Dysfunction of the urinary bladder." [HPO:probinson]
+synonym: "Poor bladder function" EXACT []
+xref: UMLS:C3806583
+is_a: HP:0000014 ! Abnormality of the bladder
+
+[Term]
+id: HP:0000010
+name: Recurrent urinary tract infections
+alt_id: HP:0000094
+def: "Repeated infections of the urinary tract." [HPO:probinson]
+comment: The urinary tract comprises the kidneys, ureters, a bladder, and a urethra.
+synonym: "Frequent urinary tract infections" EXACT layperson []
+synonym: "Recurrent UTIs" EXACT abbreviation []
+synonym: "Repeated bladder infections" EXACT layperson []
+synonym: "Repeated urinary tract infections" EXACT layperson []
+synonym: "Urinary tract infections" EXACT layperson []
+synonym: "Urinary tract infections, recurrent" EXACT layperson [HPO:skoehler]
+xref: SNOMEDCT_US:197927001
+xref: UMLS:C0262655
+is_a: HP:0002719 ! Recurrent infections
+is_a: HP:0011277 ! Abnormality of the urinary system physiology
+
+[Term]
+id: HP:0000011
+name: Neurogenic bladder
+def: "A type of bladder dysfunction caused by neurologic damage. Neurogenic bladder can be flaccid or spastic. Common manifestatios of neurogenic bladder are overflow incontinence, frequency, urgency, urge incontinence, and retention." [HPO:probinson, PMID:18095004, PMID:22400020]
+comment: Neurogenic bladder sphincter dysfunction (NBSD) can develop as a result of a lesion at any level in the nervous system, including the cerebral cortex, spinal cord, or peripheral nervous system. Neurologic conditions in children leading to neurogenic bladder dysfunction are predominantly congenital neural tube defects (including myelomeningocele, lipomeningocele, sacral agenesis, and occult lesions causing tethered cord). Acquired causes such as spinal cord tumors or trauma or sequelae of transverse myelitis are less frequent. Whereas from an etiologic standpoint neurogenic bladder dysfunction is a heterogeneous group, medical management will be similar irrespective of the underlying cause.
+synonym: "Lack of bladder control due to nervous system injury" EXACT layperson [ORCID:0000-0002-6548-5200]
+xref: MSH:D001750
+xref: SNOMEDCT_US:397732007
+xref: SNOMEDCT_US:398064005
+xref: UMLS:C0005697
+is_a: HP:0000009 ! Functional abnormality of the bladder
+
+[Term]
+id: HP:0000012
+name: Urinary urgency
+def: "Urge incontinence is the strong, sudden need to urinate." [HPO:probinson, PMID:12559262]
+comment: Urinary urgency is the strong, sudden need to urinate and is usually due to bladder spasms or contractions. This symptom is suggestive of, but not necessarily conclusive for urodynamically demonstrable detrusor hyperactivity.
+synonym: "Overactive bladder" EXACT layperson [ORCID:0000-0002-0736-9199]
+synonym: "Overactive bladder syndrome" RELATED []
+synonym: "Urgency frequency syndrome" RELATED []
+synonym: "Urinary urgency" EXACT layperson []
+xref: SNOMEDCT_US:75088002
+xref: UMLS:C0085606
+xref: UMLS:C3544092
+xref: UMLS:C4020898
+is_a: HP:0000009 ! Functional abnormality of the bladder
+
+[Term]
+id: HP:0000013
+name: Hypoplasia of the uterus
+alt_id: HP:0001154
+alt_id: HP:0008637
+def: "Underdevelopment of the uterus." [HPO:probinson]
+synonym: "Hypoplastic uterus" EXACT []
+synonym: "Rudimentary uterus" EXACT []
+synonym: "Small uterus" EXACT layperson [ORCID:0000-0001-5208-3432]
+synonym: "Underdeveloped uterus" EXACT layperson [ORCID:0000-0001-5208-3432]
+xref: SNOMEDCT_US:35850006
+xref: UMLS:C0266399
+is_a: HP:0008684 ! Aplasia/hypoplasia of the uterus
+
+[Term]
+id: HP:0000014
+name: Abnormality of the bladder
+def: "An abnormality of the urinary bladder." [HPO:probinson]
+xref: UMLS:C0149632
+is_a: HP:0010936 ! Abnormality of the lower urinary tract
+
+[Term]
+id: HP:0000015
+name: Bladder diverticulum
+def: "Diverticulum (sac or pouch) in the wall of the urinary bladder." [HPO:probinson]
+synonym: "Bladder diverticula" EXACT [HPO:skoehler]
+xref: MSH:C562406
+xref: SNOMEDCT_US:197866008
+xref: UMLS:C0156273
+is_a: HP:0025487 ! Abnormality of bladder morphology
+
+[Term]
+id: HP:0000016
+name: Urinary retention
+def: "Inability to completely empty the urinary bladder during the process of urination." [HPO:probinson]
+comment: Urinary retention is the inability of the urinary bladder to empty. The cause may be neurologic or nonneurologic.
+synonym: "Increased post-void residual urine volume" EXACT []
+xref: MSH:D016055
+xref: SNOMEDCT_US:130951007
+xref: SNOMEDCT_US:267064002
+xref: SNOMEDCT_US:449491000124101
+xref: UMLS:C0080274
+is_a: HP:0000009 ! Functional abnormality of the bladder
+
+[Term]
+id: HP:0000017
+name: Nocturia
+def: "Abnormally increased production of urine during the night leading to an unusually frequent need to urinate." [HPO:sdoelken]
+comment: Often occuring as a result of heart insufficiency.
+synonym: "Nycturia" EXACT [HPO:sdoelken]
+xref: MSH:D053158
+xref: SNOMEDCT_US:139394000
+xref: UMLS:C0028734
+is_a: HP:0000009 ! Functional abnormality of the bladder
+
+[Term]
+id: HP:0000019
+name: Urinary hesitancy
+def: "Difficulty in beginning the process of urination." [HPO:probinson]
+synonym: "Difficulty with flow" EXACT layperson [ORCID:0000-0001-5208-3432]
+xref: SNOMEDCT_US:5972002
+xref: UMLS:C0152032
+is_a: HP:0000009 ! Functional abnormality of the bladder
+
+[Term]
+id: HP:0000020
+name: Urinary incontinence
+alt_id: HP:0006942
+alt_id: HP:0008681
+def: "Loss of the ability to control the urinary bladder leading to involuntary urination." [HPO:sdoelken, PMID:12559262]
+comment: Urinary incontinence can be defined as the complaint of any involuntary leakage of urine.
+synonym: "Bladder incontinence" EXACT []
+synonym: "Loss of bladder control" EXACT layperson [ORCID:0000-0001-5208-3432]
+xref: MSH:D014549
+xref: SNOMEDCT_US:165232002
+xref: UMLS:C0042024
+is_a: HP:0000009 ! Functional abnormality of the bladder
+is_a: HP:0031064 ! Impaired continence
+
+[Term]
+id: HP:0000021
+name: Megacystis
+alt_id: HP:0002838
+def: "Dilatation of the bladder postnatally." [HPO:probinson]
+xref: MSH:C536139
+xref: UMLS:C1855311
+is_a: HP:0010955 ! Dilatation of the bladder
+
+[Term]
+id: HP:0000022
+name: Abnormal male internal genitalia morphology
+def: "An abnormality of the male internal genitalia." [HPO:probinson]
+comment: The internal genital structures of the male including the testis, epididymis, vas deferens, seminal vesicle, ejaculatory duct, bulbourethral gland, and the prostate.
+xref: UMLS:C4025899
+is_a: HP:0000812 ! Abnormal internal genitalia
+is_a: HP:0010461 ! Abnormality of the male genitalia
+
+[Term]
+id: HP:0000023
+name: Inguinal hernia
+def: "Protrusion of the contents of the abdominal cavity through the inguinal canal." [HPO:probinson]
+comment: Inguinal hernia appears as a bulge in the groin.
+subset: hposlim_core
+xref: MEDDRA:10022016 "Inguinal hernia"
+xref: MSH:D006552
+xref: SNOMEDCT_US:396232000
+xref: UMLS:C0019294
+is_a: HP:0004299 ! Hernia of the abdominal wall
+
+[Term]
+id: HP:0000024
+name: Prostatitis
+def: "The presence of inflammation of the prostate." [HPO:probinson]
+synonym: "Inflammation of the prostate" EXACT layperson [ORCID:0000-0001-5208-3432]
+xref: MSH:D011472
+xref: SNOMEDCT_US:9713002
+xref: UMLS:C0033581
+is_a: HP:0008775 ! Abnormal prostate morphology
+is_a: HP:0012649 ! Increased inflammatory response
+
+[Term]
+id: HP:0000025
+name: Functional abnormality of male internal genitalia
+xref: UMLS:C4025898
+is_a: HP:0012874 ! Abnormal male reproductive system physiology
+
+[Term]
+id: HP:0000026
+name: Male hypogonadism
+alt_id: HP:0008649
+def: "Decreased functionality of the male gonad, i.e., of the testis, with reduced spermatogenesis or testosterone synthesis." [HPO:probinson]
+synonym: "Decreased function of male gonad" EXACT layperson [ORCID:0000-0001-5208-3432]
+xref: MSH:D005058
+xref: SNOMEDCT_US:48723006
+xref: UMLS:C0151721
+is_a: HP:0000025 ! Functional abnormality of male internal genitalia
+is_a: HP:0000135 ! Hypogonadism
+
+[Term]
+id: HP:0000027
+name: Azoospermia
+def: "Absence of any measurable level of sperm in his semen." [HPO:probinson, PMID:20514278]
+synonym: "Absent sperm in semen" EXACT layperson [ORCID:0000-0001-5208-3432]
+xref: MSH:D053713
+xref: SNOMEDCT_US:425558002
+xref: SNOMEDCT_US:48188009
+xref: UMLS:C0004509
+is_a: HP:0008669 ! Abnormal spermatogenesis
+
+[Term]
+id: HP:0000028
+name: Cryptorchidism
+alt_id: HP:0000797
+def: "Testis in inguinal canal. That is, absence of one or both testes from the scrotum owing to failure of the testis or testes to descend through the inguinal canal to the scrotum." [HPO:probinson, PMID:23650202]
+comment: The gonad is mobile and can be retracted superiorly by the cremaster muscle reflex stimulated, for instance, by cold or touch. A retracted testis is not cryptorchidism. An abdominal testis cannot be distinguished by physical examination from an (Apparently) absent testis and requires radiological (or, rarely, surgical) procedures for assessment.
+synonym: "Cryptorchism" EXACT [ORCID:0000-0001-5208-3432]
+synonym: "Undescended testes" EXACT layperson []
+synonym: "Undescended testis" EXACT layperson []
+xref: Fyler:4493
+xref: MSH:D003456
+xref: SNOMEDCT_US:204878001
+xref: UMLS:C0010417
+is_a: HP:0000035 ! Abnormal testis morphology
+
+[Term]
+id: HP:0000029
+name: Testicular atrophy
+def: "Wasting (atrophy) of the testicle (the male gonad) manifested by a decrease in size and potentially by a loss of fertility." [HPO:probinson]
+synonym: "Testicular degeneration" EXACT layperson [ORCID:0000-0001-5208-3432]
+xref: SNOMEDCT_US:17585008
+xref: UMLS:C0156312
+is_a: HP:0000035 ! Abnormal testis morphology
+
+[Term]
+id: HP:0000030
+name: Testicular gonadoblastoma
+def: "The presence of a gonadoblastoma of the testis." [HPO:probinson]
+synonym: "Gonadoblastoma, male" RELATED []
+xref: NCIT:C3754
+xref: UMLS:C1515283
+is_a: HP:0000150 ! Gonadoblastoma
+is_a: HP:0010788 ! Testicular neoplasm
+
+[Term]
+id: HP:0000031
+name: Epididymitis
+def: "The presence of inflammation of the epididymis." [HPO:probinson]
+xref: MSH:D004823
+xref: SNOMEDCT_US:31070006
+xref: UMLS:C0014534
+is_a: HP:0009714 ! Abnormal epididymis morphology
+is_a: HP:0012649 ! Increased inflammatory response
+
+[Term]
+id: HP:0000032
+name: Abnormality of male external genitalia
+def: "An abnormality of male external genitalia." [HPO:probinson]
+xref: UMLS:C4025897
+is_a: HP:0000811 ! Abnormal external genitalia
+is_a: HP:0010461 ! Abnormality of the male genitalia
+
+[Term]
+id: HP:0000033
+name: Ambiguous genitalia, male
+def: "Ambiguous genitalia in an individual with XY genetic gender." [HPO:probinson]
+synonym: "Ambiguous genitalia in males" EXACT layperson []
+xref: UMLS:C4021823
+is_a: HP:0000032 ! Abnormality of male external genitalia
+is_a: HP:0000062 ! Ambiguous genitalia
+
+[Term]
+id: HP:0000034
+name: Hydrocele testis
+def: "Accumulation of clear fluid in the between the layers of membrane (tunica vaginalis) surrounding the testis." [PMID:32644551]
+synonym: "Hydrocele" BROAD []
+synonym: "Testicular hydrocele" EXACT []
+xref: MSH:D006848
+xref: SNOMEDCT_US:26614003
+xref: SNOMEDCT_US:386152007
+xref: SNOMEDCT_US:55434001
+xref: UMLS:C1720771
+is_a: HP:0000035 ! Abnormal testis morphology
+
+[Term]
+id: HP:0000035
+name: Abnormal testis morphology
+def: "An anomaly of the testicle (the male gonad)." [HPO:probinson]
+synonym: "Abnormality of the testis" EXACT layperson []
+synonym: "Anomaly of the testes" EXACT []
+xref: SNOMEDCT_US:55631001
+xref: UMLS:C0266423
+is_a: HP:0000032 ! Abnormality of male external genitalia
+
+[Term]
+id: HP:0000036
+name: Abnormal penis morphology
+def: "Abnormality of the male external sex organ." []
+synonym: "Abnormality of the penis" EXACT layperson []
+xref: UMLS:C4025896
+is_a: HP:0000032 ! Abnormality of male external genitalia
+
+[Term]
+id: HP:0000037
+name: Male pseudohermaphroditism
+def: "Hermaphroditism refers to a discrepancy between the morphology of the gonads and that of the external genitalia. In male pseudohermaphroditism, the genotype is male (XY) and the external genitalia are imcompletely virilized, ambiguous, or complete female. If gonads are present, they are testes." [HPO:curators]
+xref: MSH:D058490
+xref: SNOMEDCT_US:111332007
+xref: UMLS:C0238395
+is_a: HP:0000032 ! Abnormality of male external genitalia
+
+[Term]
+id: HP:0000039
+name: Epispadias
+def: "Epispadias is a urogenital malformation characterized by the failure of the urethral tube to tubularize on the dorsal aspect. Unlike in hypospadias, where the meatus is on the ventral aspect, children with epispadias have a wide-open urethral plate on the dorsum. It is commonly seen as a component in the spectrum of bladder exstrophy-epispadias-complex. Isolated epispadias constitutes less than 10 percent of the total cases of epispadias." [HPO:probinson, PMID:23650202, PMID:33085327]
+comment: Epispadias may be present in a phenotypic male, female, or an individual with ambiguous genitalia. A meatus in a phenotypic male may be positioned either on the glans (glandular or balanic epispadias), the shaft (penile epispadias) or at the attachment of the penis to the abdominal wall (penopubic epispadias). Alternatively, the urethra may be an open groove along the dorsal shaft of the penis, with no readily recognized meatus. Epispadias is a frequent component of Bladder exstrophy, but should be coded separately.
+xref: SNOMEDCT_US:406477003
+xref: UMLS:C0563449
+is_a: HP:0100627 ! Displacement of the urethral meatus
+
+[Term]
+id: HP:0000040
+name: Long penis
+def: "Penile length more than 2 SD above the mean for age." []
+comment: Penile length is the distance between the midline attachment of the gently stretched, flaccid penis above the pubic symphysis and tip of the glans.
+synonym: "Enlarged penis" EXACT layperson []
+synonym: "Long penis" EXACT layperson []
+xref: SNOMEDCT_US:88673001
+xref: UMLS:C0269011
+is_a: HP:0000036 ! Abnormal penis morphology
+
+[Term]
+id: HP:0000041
+name: Chordee
+def: "Ventral, lateral, or ventrolateral bowing of the shaft and glans penis of more than 30 degrees." [HPO:probinson, PMID:23650202]
+comment: The degree of variation of penis curvature is a continuum, but traditionally 30 degrees is considered the threshold for surgical intervention on chordee. Bowing usually becomes more obvious in an erect penis, but is frequently also palpable when stretching a flaccid penis. Chordee can be congenital or acquired; if the former, it can be associated with Webbed Penis or Hypospadias, which should be coded separately.
+xref: SNOMEDCT_US:4287008
+xref: UMLS:C0221182
+is_a: HP:0000036 ! Abnormal penis morphology
+
+[Term]
+id: HP:0000042
+name: Absent external genitalia
+def: "Lack of external genitalia in a male or female individual." [HPO:probinson]
+synonym: "Absent external genitalia" EXACT layperson []
+xref: UMLS:C1848869
+is_a: HP:0000811 ! Abnormal external genitalia
+
+[Term]
+id: HP:0000044
+name: Hypogonadotropic hypogonadism
+alt_id: HP:0003335
+alt_id: HP:0008224
+def: "Hypogonadotropic hypogonadism is characterized by reduced function of the gonads (testes in males or ovaries in females) and results from the absence of the gonadal stimulating pituitary hormones: follicle stimulating hormone (FSH) and luteinizing hormone (LH)." [HPO:probinson, PMID:23503957]
+synonym: "Hypogonadotrophic hypogonadism" EXACT []
+synonym: "Isolated hypogonadotropic hypogonadism" RELATED []
+synonym: "Low gonadotropins (secondary hypogonadism)" EXACT []
+xref: MSH:D007006
+xref: SNOMEDCT_US:33927004
+xref: UMLS:C0271623
+xref: UMLS:C3489396
+is_a: HP:0000135 ! Hypogonadism
+
+[Term]
+id: HP:0000045
+name: Abnormality of the scrotum
+xref: UMLS:C4025895
+is_a: HP:0000032 ! Abnormality of male external genitalia
+
+[Term]
+id: HP:0000046
+name: Small scrotum
+alt_id: HP:0030276
+def: "Apparently small scrotum for age." [PMID:23650202]
+comment: A small scrotum is often accompanied by Cryptorchidism which should be coded separately. The size of the scrotum is dependent on the ambient temperature: a low temperature may cause the testes to retract, leading to the false impression of a small scrotum.
+synonym: "Hypoplastic scrotum" EXACT []
+synonym: "Scrotal hypoplasia" EXACT []
+synonym: "Smaller than typical growth of scrotum" EXACT layperson [https://orcid.org/0000-0001-5208-3432, https://orcid.org/0000-0002-6548-5200]
+synonym: "Underdeveloped scrotum" EXACT layperson []
+xref: SNOMEDCT_US:204912007
+xref: UMLS:C0431659
+is_a: HP:0000045 ! Abnormality of the scrotum
+is_a: HP:0000050 ! Hypoplastic male external genitalia
+
+[Term]
+id: HP:0000047
+name: Hypospadias
+def: "Abnormal position of urethral meatus on the ventral penile shaft (underside) characterized by displacement of the urethral meatus from the tip of the glans penis to the ventral surface of the penis, scrotum, or perineum." [HPO:probinson, PMID:21968448]
+synonym: "Hypospadia" EXACT [ORCID:0000-0001-5208-3432]
+xref: Fyler:4504
+xref: SNOMEDCT_US:204888000
+xref: UMLS:C1691215
+is_a: HP:0100627 ! Displacement of the urethral meatus
+
+[Term]
+id: HP:0000048
+name: Bifid scrotum
+def: "Midline indentation or cleft of the scrotum." [HPO:probinson, PMID:23650202]
+comment: A testis may or may not be present in each half of the scrotum.
+synonym: "Cleft of scrotum" EXACT layperson [ORCID:0000-0001-5208-3432]
+synonym: "Scrotal cleft" EXACT []
+xref: SNOMEDCT_US:236780002
+xref: UMLS:C0341787
+is_a: HP:0000045 ! Abnormality of the scrotum
+
+[Term]
+id: HP:0000049
+name: Shawl scrotum
+def: "Superior margin of the scrotum superior to the base of the penis." [HPO:probinson, PMID:23650202]
+comment: A congenital overriding scrotum may disappear with growth and development, especially during puberty. If the entire scrotum is located superior to the penis, the term Penoscrotal transposition is used instead.
+synonym: "Overriding scrotum" EXACT []
+synonym: "Scrotum surrounds penis" EXACT layperson [ORCID:0000-0002-6548-5200]
+xref: UMLS:C1858539
+is_a: HP:0000045 ! Abnormality of the scrotum
+
+[Term]
+id: HP:0000050
+name: Hypoplastic male external genitalia
+alt_id: HP:0008710
+alt_id: HP:0008721
+def: "Underdevelopment of part or all of the male external reproductive organs (which include the penis, the scrotum and the urethra)." [HPO:probinson]
+synonym: "Hypoplastic male genitalia" EXACT []
+synonym: "Small male external genitalia" EXACT layperson []
+synonym: "Underdeveloped male genitalia" EXACT layperson [ORCID:0000-0001-5208-3432]
+xref: UMLS:C1852534
+is_a: HP:0000032 ! Abnormality of male external genitalia
+is_a: HP:0003241 ! External genital hypoplasia
+
+[Term]
+id: HP:0000051
+name: Perineal hypospadias
+def: "Hypospadias with location of the urethral meatus in the perineal region." [HPO:probinson, PMID:8097257]
+xref: SNOMEDCT_US:204890004
+xref: UMLS:C0452148
+is_a: HP:0000047 ! Hypospadias
+
+[Term]
+id: HP:0000052
+name: Urethral atresia, male
+def: "Congenital anomaly characterized by closure or failure to develop an opening in the urethra in males." [HPO:probinson]
+xref: UMLS:C4025894
+is_a: HP:0000068 ! Urethral atresia
+
+[Term]
+id: HP:0000053
+name: Macroorchidism
+def: "The presence of abnormally large testes." [HPO:probinson]
+synonym: "Large testicles" EXACT []
+synonym: "Large testis" EXACT layperson []
+xref: UMLS:C1263023
+is_a: HP:0045058 ! Abnormality of the testis size
+
+[Term]
+id: HP:0000054
+name: Micropenis
+alt_id: HP:0000038
+def: "Abnormally small penis. At birth, the normal penis is about 3 cm (stretched length from pubic tubercle to tip of penis) with micropenis less than 2.0-2.5 cm." [HPO:probinson, PMID:15102623]
+synonym: "Short penis" EXACT layperson []
+synonym: "Small penis" EXACT layperson []
+xref: SNOMEDCT_US:34911001
+xref: UMLS:C4551492
+is_a: HP:0008736 ! Hypoplasia of penis
+
+[Term]
+id: HP:0000055
+name: Abnormality of female external genitalia
+def: "An abnormality of the female external genitalia." [HPO:probinson]
+synonym: "Abnormal female external genitalia" EXACT layperson [HPO:skoehler]
+xref: UMLS:C4021822
+is_a: HP:0000811 ! Abnormal external genitalia
+is_a: HP:0010460 ! Abnormality of the female genitalia
+
+[Term]
+id: HP:0000056
+name: Abnormality of the clitoris
+def: "An abnormality of the clitoris." [HPO:probinson]
+synonym: "Abnormality of the clit" EXACT layperson [ORCID:0000-0001-5208-3432]
+xref: UMLS:C4025893
+is_a: HP:0000055 ! Abnormality of female external genitalia
+
+[Term]
+id: HP:0000057
+name: obsolete Clitoromegaly
+is_obsolete: true
+replaced_by: HP:0008665
+
+[Term]
+id: HP:0000058
+name: Abnormal labia morphology
+def: "An anomaly of the labia, the externally visible portions of the vulva." [HPO:probinson]
+synonym: "Abnormality of the labia" EXACT []
+xref: UMLS:C4025892
+is_a: HP:0000055 ! Abnormality of female external genitalia
+
+[Term]
+id: HP:0000059
+name: Hypoplastic labia majora
+def: "Undergrowth of the outer labia." [HPO:probinson]
+synonym: "Hypoplasia of labia majora" EXACT []
+synonym: "Small labia majora" EXACT layperson []
+synonym: "Underdeveloped vaginal lips" EXACT layperson [ORCID:0000-0001-5208-3432]
+xref: SNOMEDCT_US:289469003
+xref: UMLS:C0566899
+is_a: HP:0000066 ! Labial hypoplasia
+is_a: HP:0012881 ! Abnormal labia majora morphology
+
+[Term]
+id: HP:0000060
+name: Clitoral hypoplasia
+def: "Developmental hypoplasia of the clitoris." [HPO:probinson]
+synonym: "Hypoplastic clitoris" EXACT []
+synonym: "Small clitoris" EXACT layperson []
+synonym: "Underdeveloped clit" EXACT layperson [ORCID:0000-0001-5208-3432]
+xref: UMLS:C1844527
+is_a: HP:0012815 ! Hypoplastic female external genitalia
+is_a: HP:0040255 ! Aplasia/Hypoplasia of the clitoris
+
+[Term]
+id: HP:0000061
+name: Ambiguous genitalia, female
+alt_id: HP:0008690
+def: "Ambiguous genitalia in an individual with XX genetic gender." [HPO:probinson]
+synonym: "Ambiguous genitalia due to virilization" RELATED []
+synonym: "Atypical appearance of female genitals" EXACT layperson [https://orcid.org/0000-0002-6548-5200]
+xref: UMLS:C1859980
+xref: UMLS:C4025891
+is_a: HP:0000055 ! Abnormality of female external genitalia
+is_a: HP:0000062 ! Ambiguous genitalia
+
+[Term]
+id: HP:0000062
+name: Ambiguous genitalia
+alt_id: HP:0008685
+alt_id: HP:0008693
+def: "A genital phenotype that is not clearly assignable to a single gender. Ambiguous genitalia can be evaluated using the Prader scale: Prader 0: Normal female external genitalia. Prader 1: Female external genitalia with clitoromegaly. Prader 2: Clitoromegaly with partial labial fusion forming a funnel-shaped urogenital sinus. Prader 3: Increased phallic enlargement. Complete labioscrotal fusion forming a urogenital sinus with a single opening. Prader 4: Complete scrotal fusion with urogenital opening at the base or on the shaft of the phallus. Prader 5: Normal male external genitalia. The diagnosis of ambiguous genitalia is made for Prader 1-4." [HPO:probinson, PMID:15102623]
+comment: Note that this term can include or combine variations in size and shape, with partial or complete absence of structures. It is preferable to describe the individual components, which are defined below. It is nonetheless a widely used bundled term and as such is retained here. The distinction of this finding from a marked degree of Hypospadias is an example of how this term can be problematic. Genetic gender is determined at fertilization, whereby the presence of a Y chromosome determines male gender. Normally, genetic gender determines gonadal gender which in turn determines phenotypic gender. Testicular development is an active process requiring expression of the primary testis determining gene SRY, which is located on the Y chromosome.
+synonym: "Ambiguous external genitalia" EXACT layperson []
+synonym: "Ambiguous external genitalia at birth" EXACT layperson []
+synonym: "Intersex genitalia" EXACT layperson []
+xref: MSH:D012734
+xref: SNOMEDCT_US:21321009
+xref: UMLS:C0266362
+is_a: HP:0000811 ! Abnormal external genitalia
+
+[Term]
+id: HP:0000063
+name: Fused labia minora
+def: "Fusion of the labia minora as a result of labial adhesions resulting in vaginal obstruction." [HPO:curators]
+synonym: "Fused inner lips" EXACT layperson [ORCID:0000-0001-5208-3432]
+xref: UMLS:C1837532
+is_a: HP:0012880 ! Abnormal labia minora morphology
+
+[Term]
+id: HP:0000064
+name: Hypoplastic labia minora
+synonym: "Underdeveloped inner lips" EXACT layperson [ORCID:0000-0001-5208-3432]
+xref: UMLS:C1849295
+is_a: HP:0000066 ! Labial hypoplasia
+is_a: HP:0012880 ! Abnormal labia minora morphology
+
+[Term]
+id: HP:0000065
+name: Labial hypertrophy
+synonym: "Enlarged vaginal lips" EXACT []
+synonym: "Enlargement of the labia" EXACT layperson [ORCID:0000-0001-5208-3432]
+synonym: "Enlargement of the vaginal lips" EXACT layperson [ORCID:0000-0001-5208-3432]
+xref: SNOMEDCT_US:16924008
+xref: UMLS:C0404531
+is_a: HP:0000058 ! Abnormal labia morphology
+
+[Term]
+id: HP:0000066
+name: Labial hypoplasia
+synonym: "Hypoplastic labia" EXACT []
+synonym: "Underdeveloped labia" EXACT layperson [ORCID:0000-0001-5208-3432]
+xref: UMLS:C1850325
+is_a: HP:0000058 ! Abnormal labia morphology
+is_a: HP:0012815 ! Hypoplastic female external genitalia
+
+[Term]
+id: HP:0000067
+name: Urethral atresia, female
+def: "Congenital anomaly characterized by closure or failure to develop an opening in the urethra in females." [HPO:probinson]
+xref: UMLS:C4025890
+is_a: HP:0000055 ! Abnormality of female external genitalia
+is_a: HP:0000068 ! Urethral atresia
+
+[Term]
+id: HP:0000068
+name: Urethral atresia
+def: "Congenital anomaly characterized by closure or failure to develop an opening in the urethra." [HPO:probinson]
+synonym: "Absent urethral opening" EXACT []
+synonym: "Urethral opening absent" EXACT []
+xref: UMLS:C1610065
+is_a: HP:0000795 ! Abnormality of the urethra
+
+[Term]
+id: HP:0000069
+name: Abnormality of the ureter
+alt_id: HP:0006001
+def: "An abnormality of the ureter. The ureter is the duct by which urine passes from the kidney to the bladder." [HPO:probinson]
+synonym: "Abnormality of the ureters" EXACT []
+synonym: "Ureter issue" EXACT []
+synonym: "Ureteral anomalies" EXACT []
+xref: UMLS:C1840382
+is_a: HP:0010935 ! Abnormality of the upper urinary tract
+
+[Term]
+id: HP:0000070
+name: Ureterocele
+def: "A ureterocele is a congenital saccular dilatation of the distal segment of the ureter." [eMedicine:453993]
+xref: MSH:D014518
+xref: SNOMEDCT_US:12818004
+xref: UMLS:C0041960
+is_a: HP:0025633 ! Abnormal ureter morphology
+
+[Term]
+id: HP:0000071
+name: Ureteral stenosis
+def: "The presence of a stenotic, i.e., constricted ureter." [HPO:probinson]
+synonym: "Narrowing of the ureter" EXACT layperson [ORCID:0000-0001-5208-3432]
+xref: SNOMEDCT_US:95574003
+xref: UMLS:C0521618
+is_a: HP:0006000 ! Ureteral obstruction
+
+[Term]
+id: HP:0000072
+name: Hydroureter
+alt_id: HP:0006003
+def: "The distention of the ureter with urine." [HPO:probinson, PMID:33085364]
+synonym: "Dilated ureter" EXACT []
+synonym: "Megaureter" EXACT []
+synonym: "Swelling of ureter" EXACT [https://orcid.org/0000-0001-5208-3432, https://orcid.org/0000-0002-6548-5200]
+synonym: "Ureteral dilatation" EXACT []
+synonym: "Uroureter" RELATED []
+synonym: "Wide ureter" EXACT []
+xref: SNOMEDCT_US:69758005
+xref: SNOMEDCT_US:95576001
+xref: UMLS:C0521620
+xref: UMLS:C4020897
+is_a: HP:0025633 ! Abnormal ureter morphology
+
+[Term]
+id: HP:0000073
+name: Ureteral duplication
+def: "A developmental anomaly characterized by the presence of two, instead of one, ureter connecting a kidney to the bladder." [HPO:curators]
+synonym: "Double ureter" EXACT layperson []
+xref: SNOMEDCT_US:49496001
+xref: UMLS:C0221365
+is_a: HP:0025633 ! Abnormal ureter morphology
+
+[Term]
+id: HP:0000074
+name: Ureteropelvic junction obstruction
+def: "Blockage of urine flow from the renal pelvis to the proximal ureter." [Eurenomics:ewuehl]
+synonym: "Pelviureteric junction obstruction" EXACT []
+synonym: "Ureteropelvic junction stenosis" EXACT []
+xref: MSH:C537373
+xref: SNOMEDCT_US:95575002
+xref: UMLS:C0521619
+is_a: HP:0000071 ! Ureteral stenosis
+
+[Term]
+id: HP:0000075
+name: Renal duplication
+def: "A congenital anomaly of the urinary tract, in which the kidney is duplicated and is drained via two separate renal pelves and ureters." [HPO:probinson]
+synonym: "Extra kidney" EXACT layperson [ORCID:0000-0001-5208-3432]
+synonym: "Supernumerary kidney" RELATED []
+xref: SNOMEDCT_US:30275001
+xref: UMLS:C0266298
+is_a: HP:0012210 ! Abnormal renal morphology
+created_by: peter
+creation_date: 2008-02-25T12:45:00Z
+
+[Term]
+id: HP:0000076
+name: Vesicoureteral reflux
+alt_id: HP:0005998
+alt_id: HP:0006002
+alt_id: HP:0008667
+def: "Abnormal (retrograde) movement of urine from the bladder into ureters or kidneys related to inadequacy of the valvular mechanism at the ureterovesicular junction or other causes." [HPO:probinson]
+synonym: "Ureteral reflux" EXACT []
+synonym: "Ureteric reflux" EXACT []
+synonym: "Vesico-ureteral reflux" EXACT []
+synonym: "Vesicoureteric reflux" EXACT []
+xref: Fyler:4510
+xref: MSH:D014718
+xref: SNOMEDCT_US:197811007
+xref: UMLS:C0042580
+is_a: HP:0000009 ! Functional abnormality of the bladder
+is_a: HP:0025634 ! Abnormal ureter physiology
+
+[Term]
+id: HP:0000077
+name: Abnormality of the kidney
+def: "An abnormality of the kidney." [HPO:probinson]
+comment: The kidney is a paired organ whose primary function is the production of urine.
+synonym: "Abnormal kidney" EXACT layperson []
+synonym: "Abnormality of the kidney" EXACT layperson []
+synonym: "Renal anomalies" EXACT []
+synonym: "Renal anomaly" EXACT []
+xref: MSH:D007674
+xref: SNOMEDCT_US:44513007
+xref: SNOMEDCT_US:90708001
+xref: UMLS:C0022658
+xref: UMLS:C0266292
+is_a: HP:0010935 ! Abnormality of the upper urinary tract
+
+[Term]
+id: HP:0000078
+name: Abnormality of the genital system
+def: "An abnormality of the genital system." [HPO:probinson]
+synonym: "Abnormality of the reproductive system" RELATED layperson []
+synonym: "Genital abnormalities" EXACT layperson []
+synonym: "Genital abnormality" EXACT layperson []
+synonym: "Genital anomalies" EXACT layperson []
+synonym: "Genital defects" EXACT layperson []
+xref: UMLS:C0281966
+xref: UMLS:C0744356
+is_a: HP:0000119 ! Abnormality of the genitourinary system
+
+[Term]
+id: HP:0000079
+name: Abnormality of the urinary system
+def: "An abnormality of the urinary system." [HPO:probinson]
+synonym: "Urinary tract abnormalities" EXACT layperson []
+synonym: "Urinary tract abnormality" EXACT layperson []
+synonym: "Urinary tract anomalies" EXACT layperson []
+xref: UMLS:C4021821
+is_a: HP:0000119 ! Abnormality of the genitourinary system
+
+[Term]
+id: HP:0000080
+name: Abnormality of reproductive system physiology
+def: "An abnormal functionality of the genital system." [HPO:probinson]
+synonym: "Abnormality of genital physiology" BROAD layperson []
+synonym: "Abnormality of reproductive system physiology" EXACT layperson []
+synonym: "Genital functional abnormality" EXACT layperson []
+xref: UMLS:C4020896
+xref: UMLS:C4021820
+is_a: HP:0000078 ! Abnormality of the genital system
+
+[Term]
+id: HP:0000081
+name: Duplicated collecting system
+def: "A duplication of the collecting system of the kidney, defined as a kidney with two (instead of, normally, one) pyelocaliceal systems. The pyelocaliceal system is comprised of the renal pelvis and calices. The duplicated renal collecting system can be associated with a single ureter or with double ureters. In the latter case, the two ureters empty separately into the bladder or fuse to form a single ureteral orifice." [HPO:probinson]
+synonym: "Double collecting system" EXACT []
+synonym: "Double urinary collecting systems on intravenous pyelography" EXACT []
+synonym: "Duplex collecting system" EXACT []
+synonym: "Duplicated renal collecting system" EXACT []
+xref: UMLS:C1858565
+is_a: HP:0004742 ! Abnormal renal collecting system morphology
+created_by: peter
+creation_date: 2008-02-25T12:45:00Z
+
+[Term]
+id: HP:0000083
+name: Renal insufficiency
+alt_id: HP:0000084
+alt_id: HP:0004723
+def: "A reduction in the level of performance of the kidneys in areas of function comprising the concentration of urine, removal of wastes, the maintenance of electrolyte balance, homeostasis of blood pressure, and calcium metabolism." [HPO:probinson]
+synonym: "Renal failure" EXACT layperson []
+synonym: "Renal failure in adulthood" EXACT layperson []
+xref: MSH:D051437
+xref: SNOMEDCT_US:236423003
+xref: SNOMEDCT_US:42399005
+xref: UMLS:C0035078
+xref: UMLS:C1565489
+xref: UMLS:C1839604
+is_a: HP:0012211 ! Abnormal renal physiology
+
+[Term]
+id: HP:0000085
+name: Horseshoe kidney
+def: "A connection of the right and left kidney by an isthmus of functioning renal parenchyma or fibrous tissue that crosses the midline." [HPO:probinson]
+synonym: "Fused kidneys" BROAD []
+synonym: "Horseshoe kidney" EXACT layperson []
+synonym: "Horseshoe kidneys" EXACT layperson []
+xref: Fyler:4507
+xref: MSH:D000069337
+xref: SNOMEDCT_US:41729002
+xref: UMLS:C0221353
+is_a: HP:0100542 ! Abnormal localization of kidney
+
+[Term]
+id: HP:0000086
+name: Ectopic kidney
+def: "A developmental defect in which a kidney is located in an abnormal anatomic position." [HPO:probinson]
+synonym: "Abnormal kidney location" EXACT layperson [ORCID:0000-0001-5208-3432]
+synonym: "Displaced kidney" EXACT layperson []
+synonym: "Ectopic kidneys" EXACT []
+synonym: "Renal ectopia" EXACT []
+xref: SNOMEDCT_US:16507009
+xref: UMLS:C0238207
+is_a: HP:0100542 ! Abnormal localization of kidney
+
+[Term]
+id: HP:0000089
+name: Renal hypoplasia
+alt_id: HP:0001968
+alt_id: HP:0004741
+alt_id: HP:0008641
+def: "Hypoplasia of the kidney." [HPO:probinson]
+comment: Oligomeganephronic renal hypoplasia differs from simple hypoplasia, in which the renal mass is reduced but the number of nephrons is normal.
+synonym: "Hypoplastic kidney" EXACT []
+synonym: "Hypoplastic kidneys" EXACT []
+synonym: "Small kidneys" EXACT layperson []
+synonym: "Underdeveloped kidneys" EXACT layperson [ORCID:0000-0001-5208-3432]
+xref: SNOMEDCT_US:32659003
+xref: UMLS:C0266295
+is_a: HP:0008678 ! Renal hypoplasia/aplasia
+
+[Term]
+id: HP:0000090
+name: Nephronophthisis
+alt_id: HP:0004748
+def: "Presence of cysts at the corticomedullary junction of the kidney in combination with tubulointerstitial fibrosis." [Eurenomics:fschaefer]
+comment: Nephronophthisis is here regarded as a phenotypic feature. The disease of the same name results in progressive symmetrical destruction of the kidneys involving both the tubules and glomeruli.
+synonym: "juvenile nephronophthisis" EXACT []
+xref: SNOMEDCT_US:204958008
+xref: UMLS:C0687120
+is_a: HP:0100957 ! Abnormal renal medulla morphology
+
+[Term]
+id: HP:0000091
+name: Abnormal renal tubule morphology
+def: "An abnormality of the renal tubules." [HPO:probinson]
+comment: The renal tubules are reabsorptive canals that are involved in the secreting, collecting, and conducting of the urine.
+synonym: "Abnormality of the renal tubule" EXACT []
+synonym: "Morphologic abnormality of the renal tubules" EXACT []
+xref: UMLS:C4021826
+is_a: HP:0012575 ! Abnormal nephron morphology
+
+[Term]
+id: HP:0000092
+name: Renal tubular atrophy
+alt_id: HP:0005578
+def: "The presence of renal tubules with thick redundant basement membranes, or a reduction of greater than 50% in tubular diameter compared to surrounding non-atrophic tubules." [HPO:probinson, PMID:27211375]
+comment: Atrophic tubules must be distinguished from acute tubular injury as both can show extensive tubular epithelial changes. In acute tubular injury, tubules are often dilated and tubular basement membranes are smooth and maintain normal thickness, in contrast to the contracted tubules with thickened and wrinkled tubular basement membranes of tubular atrophy. Further, in acute tubular injury, tubules are usually back-to-back or mildly separated by interstitial edema, while in tubular atrophy tubules can be separated by interstitial fibrosis. Uniform thickening of tubular basement membranes without shrinkage and otherwise healthy epithelial cells can be seen in diabetic nephropathy. Duplication, or lamellation, thickening, and disruption of tubular basement membranes with tubular dilatation can be seen in medullary cystic kidney disease/nephronophthisis.
+synonym: "Renal tubular cell atrophy" EXACT []
+synonym: "Tubular atrophy" EXACT []
+xref: UMLS:C1858395
+is_a: HP:0032599 ! Abnormal renal tubular epithelial morphology
+
+[Term]
+id: HP:0000093
+name: Proteinuria
+def: "Increased levels of protein in the urine." [HPO:probinson]
+synonym: "High urine protein levels" EXACT layperson [ORCID:0000-0001-5208-3432]
+synonym: "Protein in urine" EXACT layperson []
+xref: MSH:D011507
+xref: SNOMEDCT_US:29738008
+xref: UMLS:C0033687
+is_a: HP:0020129 ! Abnormal urine protein level
+
+[Term]
+id: HP:0000095
+name: Abnormal renal glomerulus morphology
+def: "A structural anomaly of the glomerulus." [Eurenomics:ewuehl, PMID:18184729]
+comment: Each human kidney contains approximately one million nephrons. The glomerulus is the most proximal component of the nephron. The glomerulus of the mammalian kidney is a highly developed vascular bed that acts as a filter, allowing a filtrate of small molecules, such as water, sugars, electrolytes and small proteins, to pass through a barrier that retains high molecular weight proteins and cells in the circulation.
+synonym: "Abnormality of renal glomerulus morphology" EXACT []
+synonym: "Morphologic abnormality of the renal glomerulus" EXACT []
+xref: UMLS:C4025889
+is_a: HP:0031263 ! Abnormal renal corpuscle morphology
+
+[Term]
+id: HP:0000096
+name: Glomerular sclerosis
+alt_id: HP:0030761
+def: "Accumulation of scar tissue within the glomerulus." [Eurenomics:fschaefer]
+synonym: "Glomerulosclerosis" EXACT []
+synonym: "Renal glomerular fibrosis" BROAD []
+xref: SNOMEDCT_US:197661001
+xref: SNOMEDCT_US:82646005
+xref: UMLS:C0178664
+is_a: HP:0000095 ! Abnormal renal glomerulus morphology
+
+[Term]
+id: HP:0000097
+name: Focal segmental glomerulosclerosis
+alt_id: HP:0004747
+def: "Segmental accumulation of scar tissue in individual (but not all) glomeruli." [Eurenomics:fschaefer, PMID:16164633]
+comment: Glomerular changes can be focal (only in some glomeruli) or diffuse (in all or almost all the glomeruli), and segmental (only a part of the glomerulus) or global (the entire glomerulus). FSGS is characterized by focal and segmental occurrence of lesions with mesangial sclerosis, obliteration of glomerular capillaries with hyalinosis and intracapillary foam cells, formation of adhesions between the glomerular tuft and Bowman's capsule, and podocyte hypertrophy. FSGS is not a disease entity, but rather a pattern of injury with quite diverse clinical behavior, morphology, and possibly also pathogenesis.
+synonym: "Focal and segmental glomerular sclerosis" EXACT []
+synonym: "Focal and segmental glomerulosclerosis" EXACT []
+synonym: "focal glomerulosclerosis" EXACT []
+xref: MSH:D005923
+xref: SNOMEDCT_US:236403004
+xref: SNOMEDCT_US:25821008
+xref: UMLS:C0017668
+is_a: HP:0000096 ! Glomerular sclerosis
